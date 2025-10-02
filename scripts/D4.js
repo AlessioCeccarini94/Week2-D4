@@ -38,11 +38,11 @@ console.log(crazySum(8, 8))
 
 const crazyDiff = function (n1) {
   let result = 0
-  result = n1 % 19
+  result = n1 - 19
   if (n1 > 19) {
     return result * 3
   }
-  return result
+  return Math.abs(result)
 }
 console.log(crazyDiff(18))
 console.log(crazyDiff(22))
@@ -162,8 +162,10 @@ console.log(cutString("Stringa"))
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-let numbers = [Math.ceil(Math.random() * 10)]
+let numbers = []
 const giveMeRandom = function (casualnumbers) {
-  return numbers
+  numbers.push([Math.floor(Math.random() * 11)])
+
+  return giveMeRandom
 }
 console.log(giveMeRandom())
