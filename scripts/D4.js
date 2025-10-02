@@ -92,6 +92,18 @@ console.log(epify("EPICODE ti da il benvenuto"))
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+const check3and7 = function (n1) {
+  let n = n1
+  if (n1 % 3 === 0) {
+    return "TRUE"
+  } else if (n1 % 7 === 0) {
+    return "TRUE"
+  } else return "FALSE"
+}
+console.log(check3and7(18))
+console.log(check3and7(21))
+console.log(check3and7(32))
+
 /* ESERCIZIO 7
  Scrivi una funzione di nome "reverseString", il cui scopo è invertire una stringa fornita come parametro (es. "EPICODE" --> "EDOCIPE")
 */
@@ -115,6 +127,24 @@ console.log(reverseString("EPICODE"))
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+const upperFirst = function (string) {
+  let words = string.split(" ")
+  let result = ""
+  for (let i = 0; i < words.length; i++) {
+    let word = words[i].charAt(0).toUpperCase() + words[i].slice(1)
+    if (i === 0) {
+      result += word
+    } else {
+      result += " " + word
+    }
+  }
+  return result
+}
+
+console.log(
+  upperFirst("stringa numero uno epicode esercizio stringa numerodue")
+)
+
 /* ESERCIZIO 9
  Scrivi una funzione di nome "cutString", che riceve come parametro una stringa. La funzione deve creare una nuova stringa senza il primo e l'ultimo carattere
  della stringa originale.
@@ -122,8 +152,18 @@ console.log(reverseString("EPICODE"))
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+const cutString = function (string) {
+  return string.slice(1, length - 1)
+}
+console.log(cutString("Stringa"))
+
 /* ESERCIZIO 10
  Scrivi una funzione di nome "giveMeRandom", che accetta come parametro un numero n e ritorna un'array contenente n numeri casuali inclusi tra 0 e 10.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+let numbers = [Math.ceil(Math.random() * 10)]
+const giveMeRandom = function (casualnumbers) {
+  return numbers
+}
+console.log(giveMeRandom())
